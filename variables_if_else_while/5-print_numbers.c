@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	char  ulvi = '0';
+	char ulvi = '0';
 
-	while (ulvi <= 9)
+	while (ulvi <='9')
 	{
 		putchar(ulvi);
 		ulvi++;
@@ -18,6 +18,4 @@ int main(void)
 
 	putchar('\n');
 	return (0);
-
-
 }

@@ -10,13 +10,13 @@ int main(void)
 	char kicik = 'a';
 	char boyuk = 'A';
 
-	while(kicik <= 'z')
+	while (kicik <= 'z')
 	{
 		putchar(kicik);
 		kicik++;
 	}
 
-	while(boyuk <= 'Z')
+	while (boyuk <= 'Z')
 	{
 		putchar(boyuk);
 		boyuk++;

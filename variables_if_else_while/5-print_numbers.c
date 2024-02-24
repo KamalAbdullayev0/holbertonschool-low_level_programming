@@ -10,12 +10,13 @@ int main(void)
 {
 	char ulvi = '0';
 
-	while (ulvi <='9')
+	while (ulvi <= '9')
 	{
 		putchar(ulvi);
 		ulvi++;
 	}
 
-	putchar('\n');
+	putchar ('\n');
+
 	return (0);
 }

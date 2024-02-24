@@ -17,6 +17,6 @@ int main(void)
 		}
 		kamal++;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }

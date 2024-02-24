@@ -1,18 +1,23 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
  * main - Entry point
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char salam = '1';
+	int a = 48;
 
-	while (salam < '16')
+	while (a != 103)
 	{
-		putchar(salam);
-		salam++;
+		if (a > 57 && a <97)
+		{
+			a++;
+			continue;
+		}
+		putchar(a);
+		a++;
 	}
 	putchar('\n');
 	return (0);

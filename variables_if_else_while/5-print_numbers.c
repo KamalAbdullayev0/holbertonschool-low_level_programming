@@ -7,7 +7,7 @@ int main(void)
 {
 	char  ulvi = '0';
 
-	while (ulvi < 10)
+	while (ulvi <= 9)
 	{
 		putchar(ulvi);
 		ulvi++;

@@ -10,5 +10,5 @@ int _abs(int x)
 	{
 		x = x * -1;
 	}
-	retrun (x);
+	return (x);
 }

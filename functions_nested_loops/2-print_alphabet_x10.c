@@ -16,7 +16,7 @@ void print_alphabet_x10(void)
 			kamal++;
 		}
 		_putchar('\n');
-
+		a++;
 		kamal = kamal - 26 ;
 	}
 }

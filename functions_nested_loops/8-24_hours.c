@@ -30,8 +30,10 @@ void jack_bauer(void)
 				_putchar(y % 10 + '0');
 			}
 			else
+			{
 				_putchar(y / 10 + '0');
 				_putchar(y % 10 + '0');
+			}
 		y++;
 		putchar('\n');
 		}

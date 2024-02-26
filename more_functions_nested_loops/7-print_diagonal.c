@@ -9,11 +9,11 @@ void print_diagonal(int n)
 {
 	int j = 0;
 	int i = 0;
-	while (i <= n)
+	while (i < n)
 	{
 	i++;
 	j = 0;
-		while (j < n)
+		while (j <= n)
 		{	
 			if (n != 0)
 			{

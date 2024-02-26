@@ -9,9 +9,10 @@ void more_numbers(void)
 {
 	int a = 0;
 	int b = 0;
+
 	while (a < 10)
 	{
-		while(b < 15)
+		while (b < 15)
 		{
 			if (b > 9)
 			{

@@ -2,6 +2,7 @@
 /**
  * more_numbers - A function that prints 10 times the numbers 0 to 14
  * @a: Variable
+ * @b: Variable
  * Return: function value
  */
 

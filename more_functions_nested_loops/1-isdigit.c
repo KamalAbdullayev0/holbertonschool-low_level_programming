@@ -3,7 +3,7 @@
 /**
  * _isdigit -  checks for a digit (0 through 9)
  *
- * @a: Variable
+ * @c: Variable
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */

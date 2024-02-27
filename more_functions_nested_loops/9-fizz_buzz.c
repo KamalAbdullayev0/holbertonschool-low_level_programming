@@ -30,4 +30,5 @@ int main(void)
 			printf("Fizz Buzz ");
 		}
 	}
+	return (0);
 }

@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * fizz-buzz - program that prints the numbers from 1 to 100
+ * main - program that prints the numbers from 1 to 100
  *
  * Return: Always 0 (Success)
  */

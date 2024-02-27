@@ -27,10 +27,10 @@ int main(void)
 		}
 		else
 		{
-			printf("Fizz Buzz");
+			printf("FizzBuzz");
 		}
 		i++;
-		if (i != 100)
+		if (i != 101)
 		{
 			printf(" ");
 		}

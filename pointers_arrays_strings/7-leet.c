@@ -12,7 +12,7 @@ char *leet(char *s)
 	char *letter;
 	char num[] = "43071";
 	char uc[] = "AEOTL";
-	char ls[] = "aeotl";
+	char lc[] = "aeotl";
 
 	while (*(s + i))
 	{

@@ -1,28 +1,29 @@
+#include "main.h"
 #include <string.h>
-#include <stddef.h>
+
 /**
- * _strstr - substring
- * @haystack: main string
- * @needle: substring
- * Return: substring
+ * _strstr - Entry point
+ *
+ * @haystack: 'varaibles'
+ * @needle: 'varaibles'
+ *
+ * Return: Always 0 (Success)
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0, counter = 0, len = strlen(needle);
-
-	while (*(haystack) != '\0')
+	for (; *haystack != '\0'; haystack++)
 	{
-		while (*(needle + i) != '\0')
+		char *one = haystack;
+		char *two = needle;
+
+		while (*one == *two && *two != '\0')
 		{
-			if (*(haystack + i) == *(needle + i))
-				counter++;
-			i++;
+			one++;
+			two++;
 		}
-		i = 0;
-		if (counter == len)
+		if (*two == '\0')
 			return (haystack);
-		counter = 0;
-		haystack++;
 	}
+
 	return (NULL);
 }

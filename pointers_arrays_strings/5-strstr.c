@@ -20,7 +20,7 @@ char *_strstr(char *haystack, char *needle)
 				i++;
 		}
 		haystack++;
-		return (haytack);
+		return (haystack);
 	}
 	return (NULL);
 }

@@ -12,7 +12,7 @@ unsigned int _strspn(char *s, char *accept)
 	int j = 0;
 	int k = 0;
 
-	while (*(s + i))
+	while (*(s) != 32)
 	{
 		j = 0;
 		while (*(accept + j))

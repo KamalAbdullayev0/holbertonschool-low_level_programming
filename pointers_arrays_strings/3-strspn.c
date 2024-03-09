@@ -1,30 +1,24 @@
 #include "main.h"
 /**
- * _strspn - does smth strange
- * @s: string
- * @accept: string2
- *
- * Return: un
+ * _strspn - find number of accept
+ * @accept: accept srting
+ * @s: main string
+ * Return: number of occurences
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
-	int j = 0;
-	int k = 0;
+	int i = 0, say = 0;
 
 	while (*(s) != 32)
 	{
-		while (*(accept + j) != '\0')
+		while (*(accept + i) != '\0')
 		{
-			if (*(s) == *(accept + j))
-			{
-				k++;
-			}
-			j++;
+			if (*(s) == *(accept + i))
+				say++;
+			i++;
 		}
+		i = 0;
 		s++;
-		j = 0;
 	}
-
-	return (k);
+	return (say);
 }

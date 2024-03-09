@@ -13,7 +13,7 @@ char *_strstr(char *haystack, char *needle)
 	int counter = 0;
 	int len = strlen(needle);
 
-	while (*(haystack + j))
+	while (*(haystack) != '\0')
 	{
 		while (*(needle + i))
 		{
@@ -25,7 +25,7 @@ char *_strstr(char *haystack, char *needle)
 		if (counter == len)
 			return (haystack);
 		counter = 0;
-		j++;
+		haystack++;
 	}
 	return (NULL);
 }

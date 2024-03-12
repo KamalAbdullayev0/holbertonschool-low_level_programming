@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 /**
- *
  * str_concat - concatenates two strings
  * @s1: first string
  * @s2: second string
@@ -18,10 +17,10 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 		i = 0;
 	else
-		while *(s1 + i)
+		while (*(s1 + i))
 			i++;
 	if (s2 == NULL)
-		while *(s2 + j)
+		while (*(s2 + j))
 			j++;
 	str = malloc(sizeof(char) * i * j + 1);
 	if (str == NULL)

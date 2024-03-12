@@ -28,12 +28,12 @@ char *str_concat(char *s1, char *s2)
 	if (str == NULL)
 		return (NULL);
 
-	while (k =< i)
+	while (k <= i)
 	{
 		*(str + k) = *(s1 + k);
 		k++;
 	}
-	while (k =< i + j)
+	while (k <= i + j)
 	{
 		*(str + k) = *(s2 + k - i);
 		k++;

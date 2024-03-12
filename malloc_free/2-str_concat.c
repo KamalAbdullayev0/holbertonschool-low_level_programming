@@ -13,6 +13,7 @@ char *str_concat(char *s1, char *s2)
 {
 	int i = 0;
 	int j = 0;
+	int k = 0;
 
 	if (s1 == NULL)
 		i = 0;
@@ -22,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		while (*(s2 + j))
 			j++;
-	str = malloc(sizeof(char) * i * j + 1);
+	str = malloc(sizeof(char) * (i + j) + 1);
 	if (str == NULL)
 		return (NULL);
 

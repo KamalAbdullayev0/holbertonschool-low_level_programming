@@ -30,12 +30,12 @@ char *str_concat(char *s1, char *s2)
 
 	while (k <= i)
 	{
-		*(str + k) = *(s1 + k);
+		str[k] = s1[k];
 		k++;
 	}
 	while (k <= i + j)
 	{
-		*(str + k) = *(s2 + k - i);
+		str[k] = s2 [k - i];
 		k++;
 	}
 	str[k] = 0;

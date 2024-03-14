@@ -24,11 +24,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ham = malloc(sizeof(char) * (i + j) + 1);
 	if (ham == NULL)
 		return (NULL);
-	while (k < i)
-	{
-		*(ham + k) = *(s1 + k);
-		k++;
-	}
 	while (k < (i + n))
 	{
 		if (k < i)

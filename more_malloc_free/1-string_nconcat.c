@@ -21,6 +21,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		j++;
 	}
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	if (n >= j)
 		n = j;
 	ham = malloc(sizeof(char) * (i + j) + 1);

@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			*(ham + k) = *(s1 + k);
 			k++;
 		}
-		while (k < i + n)
+		while (k < (i + n))
 		{
 			*(ham + k) = *(s2 + k - i);
 			k++;

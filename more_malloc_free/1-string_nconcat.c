@@ -30,20 +30,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		printf("Yaddas ayrila bilmedi");
 		exit(EXIT_FAILURE);
 	}
-	if (j - n > 0)
+	while (k < i)
 	{
-		while (k < i)
-		{
-			*(ham + k) = *(s1 + k);
-			k++;
-		}
-		while (k < (i + n))
-		{
-			*(ham + k) = *(s2 + k - i);
-			k++;
-		}
+		*(ham + k) = *(s1 + k);
+		k++;
 	}
-	else
+	while (k < (i + n))
+	{
+		*(ham + k) = *(s2 + k - i);
+		k++;
+	}
+	if (j - n <= 0)
 	{
 		while (k < i)
 		{

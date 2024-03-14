@@ -26,19 +26,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	ham = malloc(sizeof(char) * (i + j) + 1);
 	if (ham == NULL)
-	{
 		return (NULL);
-	}
 	if (j - n <= 0)
-        {
-                while (k < i)
-                {
-                        *(ham + k) = *(s1 + k);
-                        k++;
-                }
+	{
+		while (k < i)
+		{
+			*(ham + k) = *(s1 + k);
+			k++;
+		}
 		ham[k] = '\0';
-        	return (ham);
-        }
+		return (ham);
+	}
 	while (k < i)
 	{
 		*(ham + k) = *(s1 + k);

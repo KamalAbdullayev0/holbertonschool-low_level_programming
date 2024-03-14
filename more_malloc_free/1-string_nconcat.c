@@ -29,6 +29,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
+	if (j - n <= 0)
+        {
+                while (k < i)
+                {
+                        *(ham + k) = *(s1 + k);
+                        k++;
+                }
+		ham[k] = '\0';
+        	return (ham);
+        }
 	while (k < i)
 	{
 		*(ham + k) = *(s1 + k);
@@ -39,14 +49,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		*(ham + k) = *(s2 + k - i);
 		k++;
 	}
-	if (j - n <= 0)
-	{
-		while (k < i)
-		{
-			*(ham + k) = *(s1 + k);
-			k++;
-		}
-	}
-	str[k] = '\0';
+	ham[k] = '\0';
 	return (ham);
 }

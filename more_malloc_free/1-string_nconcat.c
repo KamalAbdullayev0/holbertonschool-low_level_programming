@@ -29,12 +29,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		*(ham + k) = *(s1 + k);
 		k++;
 	}
-	while (k < (i + j))
+	while (k < (i + n))
 	{
 		if (k < i)
 			*(ham + k) = *(s1 + k);
 		else
-			*(ham + k) = *s2;
+			*(ham + k) = *(s2 + k - i);
 		k++;
 	}
 	ham[k] = '\0';

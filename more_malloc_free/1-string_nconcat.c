@@ -25,7 +25,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 	}
 	ham = malloc(sizeof(char) * (i + j) + 1);
-
+	if (ham == NULL)
+	{
+		printf("Yaddas ayrila bilmedi");
+		exit(EXIT_FAILURE);
+	}
 	if (j - n > 0)
 	{
 		while (k < i)

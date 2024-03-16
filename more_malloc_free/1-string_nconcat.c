@@ -21,8 +21,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		j++;
 	}
-	if (s1 == 0 || s2 == 0)
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
+	if (s1 == NULL || s2 == NULL)
+	{
+		s1 = 0;
+		s2 = 0;
+	}
 	if (n >= j)
 		n = j;
 	ham = malloc(sizeof(char) * (i + j) + 1);

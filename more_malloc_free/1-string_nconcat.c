@@ -1,41 +1,44 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-
+#include <stdlib.h>
 /**
  * *string_nconcat - check the code
  * @s1: s1
  * @s2: s2
- * @n: n
+ * @n: count of elements from 2nd string
  * Return: Always 0.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *result;
-	unsigned int size1, size2, size, i;
+	unsigned int i = 0, j = 0, k = 0;
+	char *str;
 
-	if (s1 == NULL)
-		size1 = 0;
-	else
-		size1 = strlen(s1);
-	if (s2 == NULL)
-		size2 = 0;
-	else
-		size2 = strlen(s2);
-	if (n >= size2)
-		n = size2;
-	size = size1 + n;
-	result = malloc(size + 1);
-	if (result == NULL)
-		return (NULL);
-	for (i = 0; i < size; i++)
+	while (*(s1 + i))
 	{
-		if (i < size1)
-			result[i] = s1[i];
-		else
-		result[i] = s2[i - size1];
+		i++;
 	}
-	result[i] = '\0';
-	return (result);
+	while (*(s2 + j))
+	{
+		j++;
+	}
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	if (n >= j)
+		n = j;
+	str = malloc(sizeof(char) * (i + j) + 1);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	while (k < (i + n))
+	{
+		if (k < i)
+			*(str + k) = *(s1 + k);
+		else
+			*(str + k) = *(s2 + k - i);
+		k++;
+	}
+	str[k] = '\0';
+	return (str);
 }

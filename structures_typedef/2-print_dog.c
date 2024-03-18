@@ -1,17 +1,14 @@
 #include "dog.h"
 #include <stdio.h>
 /**
- * init_dog - initialize valuse to dog
+ * print_dog - function that prints a struct dog
  * @d: dog structure
- * @name: name of dog
- * @age: age of th dog
- * @owner: owner of the dog
  * Return: none
  */
 void print_dog(struct dog *d)
 {
 	 if (d == NULL)
-		return;
+		 return;
 	printf("Name: ");
 	if (d->name == name)
 	{
@@ -22,7 +19,7 @@ void print_dog(struct dog *d)
 	printf("Age: ");
 	if ((*d).age == age)
 	{
-		printf("%s\n", (*d).age);
+		printf("%f\n", (*d).age);
 	}
 	else
 		printf("%s\n", "(nil)");
@@ -32,5 +29,5 @@ void print_dog(struct dog *d)
 		printf("%s\n", (*d).owner);
 	}
 	else
-		printf("%s\n", "(nil)";
+		printf("%s\n", "(nil)");
 }

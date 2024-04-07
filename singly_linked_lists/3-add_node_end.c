@@ -1,36 +1,41 @@
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 /**
- * add_node_end - insertion
- * @head: node in linked list
- * @str: string in node
- * Return: size of nodes in linked list
+ * add_node_end - check the code
+ * @head: head
+ * @str: string
+ * Return: Always 0.
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *node, *temp;
+	int lens = 0;
+	list_t *new_node;
+	list_t *temp;
 
-	if (!str)
+	for (lens = 0; str[lens] != '\0'; lens++)
+		;
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 		return (NULL);
-
-	node = malloc(sizeof(list_t));
-	if (!node)
+	new_node->str = strdup(str);
+	if (new_node->str == NULL)
+	{
+		free(new_node);
 		return (NULL);
-
-	(*node).str = strdup(str);
-	(*node).len = strlen(str);
-	(*node).next = NULL;
-
+	}
+	new_node->len = lens;
 	if (*head == NULL)
 	{
-		*head = node;
-		return (node);
+		*head = new_node;
 	}
 	temp = *head;
-	while ((*temp).next)
-		temp = (*temp).next;
-	(*temp).next = node;
-	return (node);
+	while (temp->next != NULL)
+	{
+		temp = temp->next;
+	}
+	temp->next = new_node;
+	new_node->next = NULL;
+	return (new_node);
 }
